@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Light</string>
+    <string name="action_settings">Einstellugnen</string>
+    <string name="message">Schliesen Sie die App um die Taschenlampe auszuschalten.</string>
+    <string name="no_camera">Ihr Handy besitzt keine Kamera!</string>
+    <string name="no_flash">Ihr Handy besitzt keinen Blitz!</string>
+    <string name="info">© Andr3as &lt;andrano.de&gt;</string>
+    <string name="image">Das Widget-Icon wurde von Yannick von Flaticon.com erstellt.</string>
+    
+</resources>
