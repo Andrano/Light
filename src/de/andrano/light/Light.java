@@ -35,7 +35,6 @@ public class Light {
 	@Override
 	protected void finalize() throws Throwable {
 		if (camera != null) {
-			camera.unlock();
 			camera.stopPreview();
 			camera.release();
 			camera = null;
@@ -45,11 +44,11 @@ public class Light {
 	
 	@SuppressLint("NewApi")
 	public Boolean turnOn() {
-		if (camera == null) {
-			camera = Camera.open();
-		}
 		//Shut on
 		try {
+			if (camera == null) {
+				camera = Camera.open();
+			}
 			parameter.setFlashMode(Parameters.FLASH_MODE_TORCH);
 			camera.setParameters(parameter);
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ) {
@@ -69,7 +68,6 @@ public class Light {
 		try {
 			parameter.setFlashMode(Parameters.FLASH_MODE_OFF);
 			camera.setParameters(parameter);
-			camera.unlock();
 			camera.stopPreview();
 			camera.release();
 			camera = null;
